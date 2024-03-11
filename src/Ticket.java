@@ -28,6 +28,9 @@ public class Ticket implements Comparable<Ticket>{
             this.name = scan.nextLine();
         }
     }
+    public String getName(){
+        return this.name;
+    }
     public void setPrice(){
         do {
             System.out.print("Введите цену : ");
