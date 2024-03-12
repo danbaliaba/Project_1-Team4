@@ -7,8 +7,8 @@ public class Main {
         while(true)
         {
             String line = insert.nextLine();
-                if(line.contains("exit"))
-                    break;
+            /*      if(line.contains("exit"))
+                    break;*/
                 else if(line.contains("help"))
                     System.out.println("info : вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)\n" +
                             "show : вывести в стандартный поток вывода все элементы коллекции в строковом представлении\n" +
