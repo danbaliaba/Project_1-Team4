@@ -9,7 +9,7 @@ public class Main {
             String line = insert.nextLine();
             /*      if(line.contains("exit"))
                     break;*/
-                else if(line.contains("help"))
+               if(line.contains("help"))
                     System.out.println("info : вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)\n" +
                             "show : вывести в стандартный поток вывода все элементы коллекции в строковом представлении\n" +
                             "add : добавить новый элемент в коллекцию\n"+
@@ -27,6 +27,21 @@ public class Main {
                     ticketManager.show();
                 else if(line.contains("add"))
                     ticketManager.add();
+               else if (line.contains("remove_first"))
+                   ticketManager.removeFirst();
+               else if (line.contains("filter_greater_than_type")) {
+                   // Здесь нужно считать тип (TicketType) и передать его в метод filterGreaterThanType
+                   // TicketType type = TicketType.valueOf(insert.nextLine());
+                   // считываем тип из ввода
+                   // ticketManager.filterGreaterThanType(type);
+                   // вызываем метод filterGreaterThanType с переданным типом
+               } else if (line.contains("print_field_descending_person")) {
+                   ticketManager.printFieldDescendingPerson();
+               } else {
+                   System.out.println("Неверная команда. Введите help для списка доступных команд.");
+               }
+
+
         }
     }
 }
