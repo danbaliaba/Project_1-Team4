@@ -8,7 +8,21 @@ public class Ticket implements Comparable<Ticket>{
     private TicketType type; //Поле может быть null
     private String person;//Поле не может быть null
 
+
     Scanner scan = new Scanner (System.in);
+
+    public Ticket(String name, int price, TicketType type, String person) {
+        this.id = ++counter;
+        this.name = name;
+        this.price = price;
+        this.type = type;
+        this.person = person;
+    }
+
+    public Ticket() {
+
+    }
+
 
     public void setId()
     {

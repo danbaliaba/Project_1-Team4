@@ -39,6 +39,33 @@ public class TicketManager {
         System.out.println("Тип списка : ArrayList");
     }
 
+    public void removeFirst() {
+        if (!ticketList.isEmpty()) {
+            ticketList.remove(0);
+        } else {
+            System.out.println("Коллекция пустая");
+        }
+    }
 
+    // Метод фильтрации по полю type
+    public void filterGreaterThanType(TicketType type) {
+        for (Ticket ticket : ticketList) {
+            if (ticket.getType() != null && ticket.getType().compareTo(type) > 0) {
+                System.out.println(ticket);
+            }
+        }
+    }
 
+    // Метод сортировки значений поля person в порядке убывания
+    public void printFieldDescendingPerson() {
+        ticketList.sort(Comparator.comparing(Ticket::getPerson).reversed());
+        for (Ticket ticket : ticketList) {
+            System.out.println(ticket.getPerson());
+        }
+    }
 }
+
+
+
+
+
